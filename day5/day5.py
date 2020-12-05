@@ -36,3 +36,7 @@ def part_two(snums):
             break
         svalue += 1
     return myseat
+
+seatnumbers = gen_seatnums()
+print(part_one(seatnumbers))
+print(part_two(seatnumbers))
