@@ -31,5 +31,5 @@ def part_two():
     partyans.append(len(partyform))
     return sum(partyans)
 
-    print(part_one())
-    print(part_two())
+print(part_one())
+print(part_two())
