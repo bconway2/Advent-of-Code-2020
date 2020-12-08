@@ -66,8 +66,6 @@ def part_two():
     [new_children, new_childrennums] = get_numchildbags(['shiny gold'], [1], extbaglist, intbaglist, intbagnums)
     interiorbags = 0
     while new_children != []:
-        print(new_children)
-        print(new_childrennums)
         interiorbags += sum(new_childrennums)
         [new_children, new_childrennums] = get_numchildbags(new_children, new_childrennums, extbaglist, intbaglist, intbagnums)
     return interiorbags
