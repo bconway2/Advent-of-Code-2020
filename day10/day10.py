@@ -26,21 +26,16 @@ def part_two(day_input):
     for i in day_input:
         test = i - last
         if test == 3:
-            must_use.append(last)
+            if last not in must_use:
+                must_use.append(last)
             must_use.append(i)
         last = i
-    
-    '''remove dups'''
-    mand_adpts = []
-    for i in must_use:
-        if i not in mand_adpts:
-            mand_adpts.append(i)
 
     '''determine dof between mandatory adapters'''
     last = 0
     tricky_cases = []
     combinations = 1
-    for adpt in mand_adpts:
+    for adpt in must_use:
         diff = adpt - last
         opt_adpt = [x for x in day_input if last < x < adpt]
         if diff <= 3: # any adapters in this range are optional
